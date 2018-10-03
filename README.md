@@ -13,3 +13,11 @@ https://cloud.google.com/source-repositories/docs/connecting-hosted-repositories
 
 このドキュメントどおりにやればできる
 
+## GitHubでmasterにpushされたら、Cloud Buildが実行されるようにする
+
+deployコマンド
+
+```
+gcloud beta functions deploy subscribe --stage-bucket ${BUCKET_NAME} --trigger-topic cloud-builds
+```
+
