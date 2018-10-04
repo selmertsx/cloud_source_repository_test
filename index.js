@@ -25,6 +25,8 @@ module.exports.subscribe = function subscribe(event, callback) {
     }]
   });
   */
+
+  console.log(SLACK_TOKEN);
   return callback(null, "Success");
 }
 
