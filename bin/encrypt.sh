@@ -1,0 +1,1 @@
+gcloud kms encrypt --plaintext-file .env.json --ciphertext-file .env.json.enc --location global --keyring sample-keyrings --key sample-key
