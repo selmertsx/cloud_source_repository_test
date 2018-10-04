@@ -6,4 +6,5 @@ const channelID = "";
 module.exports.subscribe = (event, callback)=>{
   console.log(event);
   console.log("test");
+  return callback("OK");
 }
