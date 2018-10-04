@@ -1,19 +1,8 @@
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
+    entrypoint: 'sh'
     args:
-    - kms
-    - decrypt
-    - --ciphertext-file=.env.yaml.enc
-    - --plaintext-file=.env.yaml
-    - --location=global
-    - --keyring=sample-keyrings
-    - --key=sample-key
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args:
-    - beta
-    - functions
-    - deploy
-    - subscribe
-    - --stage-bucket=selmertsx-sample-bucket
-    - --trigger-topic=cloud-builds
-    - --env-vars-file=.env.yaml
+      - '-c'
+      - |
+        gcloud kms decrypt --ciphertext-file=.env.yaml.enc --plaintext-file=.env.yaml --location=global --keyring=sample-keyrings --key=sample-key
+        gcloud beta functions deploy subscribe --stage-bucket=selmertsx-sample-bucket --trigger-topic=cloud-builds --env-vars-file=.env.yaml
