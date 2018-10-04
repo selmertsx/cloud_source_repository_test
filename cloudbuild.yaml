@@ -17,4 +17,3 @@ steps:
     - --stage-bucket=selmertsx-sample-bucket
     - --trigger-topic=cloud-builds
     - --env-vars-file=.env.yaml
-
