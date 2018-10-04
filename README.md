@@ -15,9 +15,21 @@ https://cloud.google.com/source-repositories/docs/connecting-hosted-repositories
 
 ## GitHubでmasterにpushされたら、Cloud Buildが実行されるようにする
 
-deployコマンド
+
+## 便利コマンド
+### cloud functionsのdeploy
 
 ```
 gcloud beta functions deploy subscribe --stage-bucket ${BUCKET_NAME} --trigger-topic cloud-builds
 ```
+
+### cloud buildの実行
+
+```
+gcloud builds submit --config=cloudbuild.yaml
+```
+
+※ 疑問
+ここで言うsourceってなんなんだろ？
+shallow cloneしているGitHubリポジトリのことなんだろうか？
 
