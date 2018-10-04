@@ -7,7 +7,7 @@ provider:
   region: asia-northeast1
   runtime: nodejs8
   credentials: ./keyfile.json
-  project: #TODO:ここどうするかなぁ....
+  project: ${env:PROJECT}
   memorySize: 128
 plugins:
   - serverless-google-cloudfunctions
@@ -19,9 +19,9 @@ package:
     - .git/**
 
 functions:
-  subscribeFunctin:
+  subscribeFunction:
     handler: subscribe
     events:
     - event:
         eventType: providers/cloud.pubsub/eventTypes/topic.publish
-        resource: #TODO: いい感じになんとかする
+        resource: projects/${env:PROJECT}/topics/cloud-builds
