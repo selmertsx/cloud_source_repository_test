@@ -4,5 +4,6 @@ steps:
     args:
       - '-c'
       - |
-        gcloud kms decrypt --ciphertext-file=.env.yaml.enc --plaintext-file=.env.yaml --location=global --keyring=sample-keyrings --key=sample-key
-        gcloud beta functions deploy subscribe --stage-bucket=selmertsx-sample-bucket --trigger-topic=cloud-builds --env-vars-file=.env.yaml
+        gcloud kms decrypt --ciphertext-file=.env.json.enc --plaintext-file=.env.json --location=global --keyring=sample-keyrings --key=sample-key
+        gcloud kms decrypt --ciphertext-file=keyfile.json.enc --plaintext-file=keyfile.json --location=global --keyring=sample-keyrings --key=sample-key
+
