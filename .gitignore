@@ -1,3 +1,4 @@
 node_modules
 .envrc
-.env.yaml
+.env.json
+keyfile.json
