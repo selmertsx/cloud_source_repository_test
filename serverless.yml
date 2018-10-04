@@ -1,0 +1,27 @@
+# see: https://serverless.com/framework/docs/providers/google/
+
+service: cloud-function-sample
+
+provider:
+  name: google
+  region: asia-northeast1
+  runtime: nodejs8
+  credentials: ./keyfile.json
+  project: #TODO:ここどうするかなぁ....
+  memorySize: 128
+plugins:
+  - serverless-google-cloudfunctions
+
+package:
+  exclude:
+    - node_modules/**
+    - .gitignore
+    - .git/**
+
+functions:
+  subscribeFunctin:
+    handler: subscribe
+    events:
+    - event:
+        eventType: providers/cloud.pubsub/eventTypes/topic.publish
+        resource: #TODO: いい感じになんとかする
