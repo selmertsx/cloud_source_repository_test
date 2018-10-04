@@ -3,7 +3,7 @@ const slackToken = process.env.SLACK_TOKEN;
 const client = new WebClient(slackToken);
 const channelID = process.env.CHANNEL_ID;
 
-module.exports.subscribe = (event, callback)=> {
+module.exports.subscribe = function subscribe(event, callback) {
   /*
   const build = eventToBuild(event.data.data);
   const status = ['SUCCESS', 'FAILURE', 'INTERNAL_ERROR', 'TIMEOUT'];
