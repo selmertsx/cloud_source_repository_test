@@ -33,3 +33,16 @@ gcloud builds submit --config=cloudbuild.yaml
 ここで言うsourceってなんなんだろ？
 shallow cloneしているGitHubリポジトリのことなんだろうか？
 
+### logs
+
+```
+# 閲覧可能なlog一覧を出力する
+gcloud logging logs list
+
+# 実行するcloud functionsのlog一覧を出力する
+gcloud logging read "logName=projects/${PROJECT_ID}/logs/cloudfunctions.googleapis.com%2Fcloud-functions" --limit=10
+```
+
+https://cloud.google.com/logging/docs/view/overview
+
+logをfilterするための情報はここにある。
