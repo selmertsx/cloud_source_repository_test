@@ -2,3 +2,4 @@ node_modules
 .envrc
 .env.json
 keyfile.json
+deploy.json
