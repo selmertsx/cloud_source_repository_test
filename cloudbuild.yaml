@@ -17,5 +17,4 @@ steps:
     - subscribe
     - --stage-bucket=selmertsx-sample-bucket
     - --trigger-topic=cloud-builds
-    - --source=.build/
     - --runtime=nodejs8
