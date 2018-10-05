@@ -8,7 +8,7 @@ provider:
   name: google
   region: asia-northeast1
   runtime: nodejs8
-  credentials: ./keyfile.json
+  credentials: ./deploy.json
   project: ${file(./.env.json):PROJECT}
   memorySize: 128
 plugins:
