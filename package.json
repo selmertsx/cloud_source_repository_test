@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "webpack --mode production"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/decimal.js": "^7.4.0",
-    "typescript": "^3.1.1"
+    "ts-loader": "^5.2.1",
+    "typescript": "^3.1.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
     "decimal.js": "^10.0.1"
