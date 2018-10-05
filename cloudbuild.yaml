@@ -9,24 +9,12 @@ steps:
       - --keyring=sample-keyrings
       - --key=sample-key
 
-  - name: gcr.io/cloud-builders/gcloud
+  - name: 'gcr.io/cloud-builders/gcloud'
     args:
-      - kms
-      - decrypt
-      - --ciphertext-file=deploy.json.enc
-      - --plaintext-file=deploy.json
-      - --location=global
-      - --keyring=sample-keyrings
-      - --key=sample-key
-
-  - name: node:10.10.0
-    entrypoint: npm
-    args:
-      - install
-      - --production
-
-  - name: node:10.10.0
-    entrypoint: npx
-    args:
-      - run
-      - deploy
+    - beta
+    - functions
+    - deploy
+    - subscribe
+    - --stage-bucket=selmertsx-sample-bucket
+    - --trigger-topic=cloud-builds
+    - --env-vars-fil=.env.yaml

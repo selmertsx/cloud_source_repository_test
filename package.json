@@ -8,12 +8,5 @@
     "deploy": "sls deploy"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@slack/client": "^4.6.0"
-  },
-  "devDependencies": {
-    "serverless": "^1.32.0",
-    "serverless-google-cloudfunctions": "^2.0.0"
-  }
+  "license": "ISC"
 }
