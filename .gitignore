@@ -3,3 +3,5 @@ node_modules
 .env.json
 keyfile.json
 deploy.json
+
+.serverless

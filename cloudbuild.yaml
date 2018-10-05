@@ -26,7 +26,7 @@ steps:
       - --production
 
   - name: node:10.10.0
+    entrypoint: npx
     args:
-      - npx
       - run
       - deploy
