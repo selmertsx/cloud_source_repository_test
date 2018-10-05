@@ -5,3 +5,5 @@ keyfile.json
 deploy.json
 
 .serverless
+.build/**/*.js
+.build/**/*.js.map

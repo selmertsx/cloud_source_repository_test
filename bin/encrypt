@@ -1,4 +1,0 @@
-#!/bin/sh -eu
-
-gcloud kms encrypt --plaintext-file .env.json --ciphertext-file .env.json.enc --location global --keyring sample-keyrings --key sample-key
-gcloud kms encrypt --plaintext-file deploy.json --ciphertext-file deploy.json.enc --location global --keyring sample-keyrings --key sample-key
