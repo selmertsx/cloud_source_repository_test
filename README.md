@@ -47,3 +47,92 @@ gcloud logging read "logName=projects/${PROJECT_ID}/logs/cloudfunctions.googleap
 https://cloud.google.com/logging/docs/view/overview
 
 logをfilterするための情報はここにある。
+
+
+## 必要そうな権限
+
+
+Cloud Functions Developer
+
+```
+cloudfunctions.functions.call
+cloudfunctions.functions.create
+cloudfunctions.functions.delete
+cloudfunctions.functions.get
+cloudfunctions.functions.list
+cloudfunctions.functions.sourceCodeGet
+cloudfunctions.functions.sourceCodeSet
+cloudfunctions.functions.update
+cloudfunctions.locations.list
+cloudfunctions.operations.get
+cloudfunctions.operations.list
+serviceusage.quotas.get
+serviceusage.services.get
+serviceusage.services.list
+```
+
+Cloud Build Service Account
+
+```
+cloudbuild.builds.create
+cloudbuild.builds.get
+cloudbuild.builds.list
+cloudbuild.builds.update
+logging.logEntries.create
+pubsub.topics.create
+pubsub.topics.publish
+resourcemanager.projects.get
+resourcemanager.projects.list
+source.repos.get
+source.repos.list
+storage.buckets.create
+storage.buckets.get
+storage.buckets.list
+storage.objects.create
+storage.objects.delete
+storage.objects.get
+storage.objects.list
+storage.objects.update
+```
+
+Cloud Function Service Agent
+
+```
+$ gcloud iam roles describe roles/cloudfunctions.serviceAgent
+description: Gives Cloud Functions service account access to managed resources.
+etag: AA==
+includedPermissions:
+- clientauthconfig.clients.list
+- iam.serviceAccounts.actAs
+- iam.serviceAccounts.getAccessToken
+- iam.serviceAccounts.signBlob
+- pubsub.subscriptions.consume
+- pubsub.subscriptions.create
+- pubsub.subscriptions.delete
+- pubsub.subscriptions.get
+- pubsub.subscriptions.getIamPolicy
+- pubsub.subscriptions.list
+- pubsub.subscriptions.setIamPolicy
+- pubsub.subscriptions.update
+- pubsub.topics.attachSubscription
+- pubsub.topics.create
+- pubsub.topics.get
+- resourcemanager.projects.get
+- resourcemanager.projects.getIamPolicy
+- serviceusage.quotas.get
+- serviceusage.services.disable
+- serviceusage.services.enable
+- storage.buckets.get
+- storage.buckets.update
+```
+
+## メモ
+
+`roles/cloudfunctions.serviceAgent` さんが、↓のコマンドでは出現しないのに
+
+```
+$ gcloud iam roles list | grep Functions
+title: Cloud Functions Developer
+title: Cloud Functions Viewer
+```
+
