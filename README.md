@@ -166,3 +166,8 @@ title: Cloud Functions Developer
 title: Cloud Functions Viewer
 ```
 
+## TODO
+
+- cloud buildに必要な権限をterraformで管理する
+- source mapを使ってdeployできるようにする
+  - https://firebase.google.com/docs/functions/typescript?hl=ja
