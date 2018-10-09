@@ -140,6 +140,13 @@ executionId: 10moh42xg44u
 result: Hello World!
 ```
 
+## localで動かす
+
+```
+npx functions start
+npx functions deploy subscribe --stage-bucket=selmertsx-sample-bucket --trigger-http
+```
+
 ## メモ
 
 `roles/cloudfunctions.serviceAgent` さんが、↓のコマンドでは出現しないのに
