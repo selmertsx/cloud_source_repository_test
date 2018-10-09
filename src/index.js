@@ -1,6 +1,5 @@
-//import {Decimal} from "decimal.js"; // これだと駄目
+import {Decimal} from "decimal.js";
 
-const Decimal = require('decimal.js'); //これだと動く
 module.exports.subscribe = (req, res) => {
   const x = new Decimal('0xff.f')
   return res.send(`Hello World! ${x}`);
