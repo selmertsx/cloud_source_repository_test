@@ -1,3 +1,3 @@
-exports.subscribe = (event, callback) => {
-  return callback(null, "Success");
+module.exports.subscribe = (req, res) => {
+  return res.send("Hello World!");
 }
