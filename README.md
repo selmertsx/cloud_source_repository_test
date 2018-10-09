@@ -127,7 +127,7 @@ includedPermissions:
 ```
 
 ## 動作確認
-### v1.1 webpackを利用する
+- tag v1.1 webpackを利用する
 
 ```
 $ npm run build
@@ -139,6 +139,8 @@ $ gcloud functions call subscribe
 executionId: 10moh42xg44u
 result: Hello World!
 ```
+
+- tag v1.2 webpackを使って外部のpackageを読み込ませてみた
 
 ## localで動かす
 
