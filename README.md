@@ -127,7 +127,10 @@ includedPermissions:
 ```
 
 ## 動作確認
+- tag v1.0 vanillaのjsをdeployする
+  - https://github.com/selmertsx/cloud_source_repository_test/tree/v1.0
 - tag v1.1 webpackを利用する
+  - https://github.com/selmertsx/cloud_source_repository_test/tree/v1.1
 
 ```
 $ npm run build
@@ -141,6 +144,7 @@ result: Hello World!
 ```
 
 - tag v1.2 webpackを使って外部のpackageを読み込ませてみた
+  - https://github.com/selmertsx/cloud_source_repository_test/tree/v1.2
 
 ## localで動かす
 
