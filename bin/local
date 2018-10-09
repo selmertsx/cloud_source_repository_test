@@ -1,0 +1,5 @@
+#!/bin/sh -u
+
+npm run build
+npx functions deploy subscribe --stage-bucket=selmertsx-sample-bucket --trigger-http
+curl npx functions deploy subscribe --stage-bucket=selmertsx-sample-bucket --trigger-http
