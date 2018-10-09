@@ -15,13 +15,14 @@ https://cloud.google.com/source-repositories/docs/connecting-hosted-repositories
 
 ## GitHubでmasterにpushされたら、Cloud Buildが実行されるようにする
 
-
-## 便利コマンド
-### cloud functionsのdeploy
+## deploy
 
 ```
+npx webpack --mode production
 gcloud beta functions deploy subscribe --stage-bucket ${BUCKET_NAME} --trigger-topic cloud-builds
 ```
+
+## 便利コマンド
 
 ### cloud buildの実行
 
