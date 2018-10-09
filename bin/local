@@ -2,4 +2,4 @@
 
 npm run build
 npx functions deploy subscribe --stage-bucket=selmertsx-sample-bucket --trigger-http
-curl npx functions deploy subscribe --stage-bucket=selmertsx-sample-bucket --trigger-http
+curl http://localhost:8010/speee-dev-optim/us-central1/subscribe
