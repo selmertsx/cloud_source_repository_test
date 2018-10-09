@@ -1,24 +1,15 @@
-const nodeExternals = require('webpack-node-externals');
+
+const nodeExternals = require('webpack-node-externals')
 
 module.exports = {
-  mode: 'production',
-  entry: './src/index.ts',
+  entry: "./src/index.js",
+  target: 'node',
   output: {
     filename: 'index.js',
-    path: __dirname,
     libraryTarget: 'this'
   },
-  target: 'node',
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader'
-      }
-    ]
-  },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: [ '.js', '.json' ]
   },
   externals: [nodeExternals()]
-};
+}
