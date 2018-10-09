@@ -8,5 +8,8 @@
     "deploy": "sls deploy"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "decimal.js": "^10.0.1"
+  }
 }
