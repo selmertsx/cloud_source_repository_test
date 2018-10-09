@@ -126,6 +126,20 @@ includedPermissions:
 - storage.buckets.update
 ```
 
+## 動作確認
+### v1.1 webpackを利用する
+
+```
+$ npm run build
+$ gcloud functions deploy subscribe --stage-bucket=selmertsx-sample-bucket --trigger-http --runtime=nodejs8
+```
+
+```
+$ gcloud functions call subscribe
+executionId: 10moh42xg44u
+result: Hello World!
+```
+
 ## メモ
 
 `roles/cloudfunctions.serviceAgent` さんが、↓のコマンドでは出現しないのに

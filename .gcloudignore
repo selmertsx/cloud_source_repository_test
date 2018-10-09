@@ -17,6 +17,7 @@
 node_modules
 #!include:.gitignore
 
+!index.js
 
 README.md
 cloudbuild.yaml

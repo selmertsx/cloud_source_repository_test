@@ -7,3 +7,4 @@ deploy.json
 .serverless
 .build/**/*.js
 .build/**/*.js.map
+index.js
